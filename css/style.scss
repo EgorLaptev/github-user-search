@@ -1,0 +1,227 @@
+* {
+	box-sizing: border-box;
+
+	user-select: none;
+}
+
+$mainColor: #4dc4db;
+
+button {
+	cursor: pointer;
+
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+
+	color: $mainColor;
+}
+
+body {
+	position: absolute;
+
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	display: flex;
+	overflow: hidden;
+
+	color: $mainColor;
+	background-color: #242424;
+
+	font-family: sans-serif;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.user {
+	.search-user {
+		width: 300px;
+
+		display: flex;
+		flex-direction: column;
+		#avatar {
+			width: 100%;
+			height: 300px;
+
+			border: 2px solid $mainColor;
+
+			object-fit: cover;
+		}
+		#avatarName {
+			width: 300px;
+			height: 50px;
+
+			text-align: center;
+
+			color: $mainColor;
+			border: 2px solid $mainColor;
+			border-top: none;
+			outline: none;
+			background-color: transparent;
+
+			font-size: 30px;
+			&::selection {
+				color: white;
+				background-color: $mainColor;
+			}
+
+			&::placeholder {
+				transition: .4s;
+
+				color: $mainColor;
+			}
+			&:hover::placeholder,
+			&:focus::placeholder {
+				opacity: 0;
+			}
+		}
+	}
+
+	#more-user-info {
+		width: 100%;
+		height: 50px;
+	}
+
+	.user-info {
+		width: 100%;
+		height: 200px;
+		margin-top: 15px;
+
+		text-align: center;
+
+		border: 2px solid $mainColor;
+		border-color: $mainColor;
+		td {
+			transition: .5s;
+
+			color: $mainColor;
+
+			font-size: 20px;
+		}
+		tr:hover {
+			background-color: rgba(89,227,255, .3);
+		}
+	}
+}
+
+.other-user-info {
+	position: relative;
+
+	width: 50%;
+	min-width: 500px;
+	max-width: 700px;
+	height: 565px;
+	margin-left: 50px;
+	div {
+		position: absolute;
+
+		width: 100%;
+		height: 48%;
+
+		border: 2px solid $mainColor;
+		.view-more {
+			position: absolute;
+			right: -2px;
+			bottom: -2px;
+
+			padding: 5px 20px;
+
+			display: none;
+
+			cursor: pointer;
+
+			border: 2px solid $mainColor;
+			background-color: #242424;
+		}
+
+		ul[id$='list'] {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+
+			display: flex;
+			overflow-x: hidden;
+			overflow-y: scroll;
+
+			list-style: none;
+
+			font-size: 20px;
+
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-content: space-around;
+
+			&::-webkit-scrollbar {
+				width: 10px;
+			}
+			&::-webkit-scrollbar-thumb {
+				border: 2px solid $mainColor;
+				border-right: none;
+				border-radius: 10px 0 0 10px;
+				background-color: rgba(89,227,255, .3);
+			}
+
+			li {
+				margin: 5px;
+
+				display: flex;
+
+				cursor: pointer;
+
+				align-items: center;
+				justify-content: space-between;
+
+				img {
+					min-width: 65px;
+					max-width: 65px;
+					min-height: 65px;
+					max-height: 65px;
+
+					border-radius: 50%;
+				}
+				.name {
+					margin-left: 10px;
+				}
+			}
+			.subscription {
+				margin: 10px;
+				padding: 10px 20px;
+
+				border: 2px solid rgba(89,227,255,.3);
+				border-radius: 25px;
+				background-color: rgba(89,227,255,.2);
+			}
+		}
+	}
+
+	.user-followers {
+		top: 0;
+		left: 0;
+	}
+	.user-subscriptions {
+		bottom: 0;
+		left: 0;
+	}
+}
+
+.other-possibilities {
+	position: relative;
+	margin-left: 50px;
+	height: 565px;
+	#ongithub {
+		position: absolute;
+		bottom: 0;
+		width: 250px;
+		height: 65px;
+		border: 2px solid $mainColor;
+		background-color: rgba(89,227,255,.3);
+		color: $mainColor;
+		font-size: 20px;
+	}
+
+}
