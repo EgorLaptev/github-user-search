@@ -3,44 +3,41 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script defer src="js/script.js"></script>
-	<script src="https://kit.fontawesome.com/19ce154370.js"></script>
-	<title>indexedDB</title>
+	<title>Search user</title>
 </head>
 <body>
 
 	<section class="user">
+
 		<div class="search-user">
 			<img id="avatar" src="https://im0-tub-ru.yandex.net/i?id=8c41602e8b341c22e4dcadd79f2c00a7&n=13&exp=1">
 			<input type="text" list="keys" id="avatarName" placeholder="User">
 		</div>
+
 		<table class="user-info" rules="none">
 			<tr data-info="name"><td>Name</td><td>Undefined</td></tr>
 			<tr data-info="id"><td>Id</td><td>Undefined</td></tr>
 			<tr data-info="type"><td>Type</td><td>Undefined</td></tr>
 			<tr data-info="site_admin"><td>Admin</td><td>Undefined</td></tr>
 		</table>
+
 	</section>
 
 	<section class="other-user-info">
+
 		<div class="user-followers">
-			<ul id="followers-list">
-			</ul>
+			<ul id="followers-list"></ul>
 			<span class="view-more">More</span>
 		</div>
+
 		<div class="user-subscriptions">
-			<ul id="subscriptions-list">
-			</ul>
+			<ul id="subscriptions-list"></ul>
 			<span class="view-more">More</span>
 		</div>
+
 	</section>
 
-	<section class="other-possibilities">
-		<button id="ongithub">
-			Github
-			<i class="fab fa-github"></i>
-		</button>
-	</section>
+	<script defer src="js/script.js"></script>
 
 </body>
 </html>
