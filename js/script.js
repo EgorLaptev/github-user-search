@@ -1,7 +1,6 @@
 "use strict";
 
 let searchUser = document.getElementById("avatarName"),
-	searchPreview = document.getElementById("avatar"),
 	userInfo = document.querySelector('.user-info'),
 	followersList = document.getElementById("followers-list"),
 	subscriptionsList = document.getElementById("subscriptions-list");
@@ -35,7 +34,6 @@ function setInfo(info) {
 function setAvatar(src) {
 	src = src || "https://im0-tub-ru.yandex.net/i?id=8c41602e8b341c22e4dcadd79f2c00a7&n=13&exp=1";
 	// Set avatar
-	console.log(src);
 	avatar.src = src;
 }
 async function setFollowers(followersURL) {
